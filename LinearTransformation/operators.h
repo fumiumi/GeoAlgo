@@ -5,44 +5,24 @@
 #include <cmath>
 
 // ベクトルの内積
-double dot(const std::vector<double>& a, const std::vector<double>& b) {
-  double sum = 0;
-  for (int i = 0; i < a.size(); ++i) {
-    sum += a[i] * b[i];
-  }
-  return sum;
-}
+double dot(const std::vector<double>& a, const std::vector<double>& b);
 
 // ベクトルのスカラー倍
-std::vector<double> scalar_multiple(const std::vector<double>& a, double k) {
-  std::vector<double> res(a.size());
-  for (int i = 0; i < a.size(); ++i) {
-    res[i] = a[i] * k;
-  }
-  return res;
-}
+std::vector<double> scalar_multiple(const std::vector<double>& a, double k);
 
 // ベクトルの和
-std::vector<double> add(const std::vector<double>& a, const std::vector<double>& b) {
-  std::vector<double> res(a.size());
-  for (int i = 0; i < a.size(); ++i) {
-    res[i] = a[i] + b[i];
-  }
-  return res;
-}
+std::vector<double> add(const std::vector<double>& a, const std::vector<double>& b);
 
 // ベクトルの差
-std::vector<double> sub(const std::vector<double>& a, const std::vector<double>& b) {
-  std::vector<double> res(a.size());
-  for (int i = 0; i < a.size(); ++i) {
-    res[i] = a[i] - b[i];
-  }
-  return res;
-}
+std::vector<double> sub(const std::vector<double>& a, const std::vector<double>& b);
 
 // ベクトルのノルム
-double norm(const std::vector<double>& a) {
-  return std::sqrt(dot(a, a));
-}
+double norm(const std::vector<double>& a);
+
+// 演算子オーバーロード
+std::vector<double> operator+(const std::vector<double>& a, const std::vector<double>& b);
+std::vector<double> operator-(const std::vector<double>& a, const std::vector<double>& b);
+std::vector<double> operator*(const std::vector<double>& a, double k);
+std::vector<double> operator*(double k, const std::vector<double>& a);
 
 #endif // OPERATORS_H
