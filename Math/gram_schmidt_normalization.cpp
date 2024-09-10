@@ -6,11 +6,9 @@
 #include <numeric>
 #include <algorithm>
 #include <functional>
-#include "operators.h"
+#include "vector_space.h"
 
 using namespace std;
-
-//ベクトルの順番に依存しないようにする
 
 // Define the missing functions
 void sub_inplace(vector<double>& a, const vector<double>& b) {
